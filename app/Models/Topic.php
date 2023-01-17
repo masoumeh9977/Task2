@@ -11,6 +11,6 @@ class Topic extends Model
 
     public function ticket()
     {
-        return $this->hasOne(Ticket::class);
+        return $this->hasMany(Ticket::class);
     }
 }
