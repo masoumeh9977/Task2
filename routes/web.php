@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Topic;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    
+
+    //First Query of the Task
+    $topic = Topic::withCount('tickets')->findOrFail(1);
+    dd($topic->tickets_count);
+
 });

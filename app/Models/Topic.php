@@ -9,7 +9,7 @@ class Topic extends Model
 {
     use HasFactory;
 
-    public function ticket()
+    public function tickets()
     {
         return $this->hasMany(Ticket::class);
     }
